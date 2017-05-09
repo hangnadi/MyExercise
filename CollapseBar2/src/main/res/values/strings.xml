@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">CollapseBar</string>
     <string name="action_settings">Settings</string>
+    <string name="text_exampple_1">Example 1</string>
+    <string name="text_exampple_2">Example 2</string>
+    <string name="text_exampple_3">Example 3</string>
+    <string name="title">Collapsing Toolbar</string>
+    <string name="subtitle">This is for practice</string>
 </resources>
