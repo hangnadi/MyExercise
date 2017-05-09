@@ -1,1 +1,1 @@
-include ':app'
+include ':CollapseBar1', ':CollapseBar2'
