@@ -8,6 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        loadImage();
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +33,31 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    private void loadImage() {
+        ImageView bgHeader = (ImageView) findViewById(R.id.bgheader);
+        Glide.with(this)
+                .load(getRandomBgImage())
+                .centerCrop()
+                .into(bgHeader);
+    }
+
+    private String getRandomBgImage() {
+        Random random = new Random();
+        switch (random.nextInt(5)) {
+            default:
+            case 0:
+                return "https://github.com/chrisbanes/cheesesquare/blob/master/app/src/main/res/drawable-nodpi/cheese_1.jpg?raw=true";
+            case 1:
+                return "https://github.com/chrisbanes/cheesesquare/blob/master/app/src/main/res/drawable-nodpi/cheese_2.jpg?raw=true";
+            case 2:
+                return "https://github.com/chrisbanes/cheesesquare/blob/master/app/src/main/res/drawable-nodpi/cheese_3.jpg?raw=true";
+            case 3:
+                return "https://github.com/chrisbanes/cheesesquare/blob/master/app/src/main/res/drawable-nodpi/cheese_4.jpg?raw=true";
+            case 4:
+                return "https://github.com/chrisbanes/cheesesquare/blob/master/app/src/main/res/drawable-nodpi/cheese_5.jpg?raw=true";
+        }
     }
 
     @Override
