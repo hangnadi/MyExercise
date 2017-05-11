@@ -1,1 +1,1 @@
-include ':CollapseBar1', ':CollapseBar2'
+include ':CollapseBar1', ':CollapseBar2', ':CollapseBar3'
