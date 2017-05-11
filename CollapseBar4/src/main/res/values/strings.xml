@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CollapseBar 4</string>
+    <string name="text_exampple_1">Example 1</string>
+    <string name="text_exampple_2">Example 2</string>
+    <string name="text_exampple_3">Example 3</string>
+    <string name="action_settings">Settings</string>
+</resources>
